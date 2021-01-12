@@ -48,8 +48,8 @@ function main()
     v3 = zeros(4000,3)
     v4 = zeros(4000,3)
 
-    println("x  p1  p2  p3  p4")    #Output of values to check
-    
+
+
     for x = 1:4000
         # inititial velocities of the 4 vortex centers (v_x, v_y, v_z)
         # The Velocity vecotr is set to 0 at the start of the code.
@@ -123,14 +123,14 @@ function main()
 
     end
 
-    println("Done")
 
+    println("x  p1  p2  p3  p4")    #Output of values to check
 
     #This plots the x v. y data of the vortecies
-    plot(pos1[:,1], pos1[:,2], title = "Vortices' Movement", label = "Vortex 1", legend=:right)    #using Plots
-    plot!(pos2[:,1], pos2[:,2], label = "Vortex 2")
-    plot!(pos3[:,1], pos3[:,2], label = "Vortex 3")
-    plot!(pos4[:,1], pos4[:,2], label = "Vortex 4")
+    plot(pos1[:,1], pos1[:,2], title = "Vortices' Movement", label = "Vortex 1", legend=:right, color = :red)    #using Plots
+    plot!(pos2[:,1], pos2[:,2], label = "Vortex 2", color = :red)
+    plot!(pos3[:,1], pos3[:,2], label = "Vortex 3", color = :blue)
+    plot!(pos4[:,1], pos4[:,2], label = "Vortex 4", color = :blue)
     xlabel!("X Position (m)")
     ylabel!("Y Position (m)")
 
